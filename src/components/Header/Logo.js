@@ -1,21 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from '../Link'
 import { ThemeConsumer } from '../../state'
 
 const LogoImage = styled.img`
-  margin: 0 0 1.6rem 0;
-  width: 11rem;
+  margin: 1.8rem 0 1.6rem 0;
+  width: 12rem;
 `
 
 const Logo = () => (
-  <div className='text-align-center'>
-    <ThemeConsumer>
-      {({ theme }) => (
-        <LogoImage src={theme.images.Logo} alt='Logo' />
-      )}
-    </ThemeConsumer>
-    <h2 className='text-transform-uppercase margin-bottom-4 margin-top-1'>IOHK Gatsby <strong>Starter</strong></h2>
-  </div>
+  <ThemeConsumer>
+    {({ theme }) => (
+      <Link href='/' tracking={{ label: `navbar_logo` }}><LogoImage src={theme.images.logo} alt='Logo' /></Link>
+    )}
+  </ThemeConsumer>
 )
 
 export default Logo

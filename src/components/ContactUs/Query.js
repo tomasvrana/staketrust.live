@@ -9,25 +9,29 @@ const Query = ({ render }) => (
       <StaticQuery
         query={graphql`
           query {
-            allFile(filter: {relativePath: {glob: "content/footer/*.md"}}) {
+            allFile(filter: {relativePath: {glob: "content/contact/*.md"}}) {
               nodes {
                 relativePath
                 childMarkdownRemark {
                   frontmatter {
                     title
-                    label_cardano
-                    product_info
-                    product_links{
-                      href
-                      label
+                    content {
+                      contact_title
+                      contact_lead
+                      contact_body
+                      contact_form {
+                        fullname
+                        jobtitle
+                        company
+                        employees
+                        producttype
+                        phone
+                        email
+                        requiredfields
+                        iagree
+                        submit
+                      }
                     }
-                    community_info
-                    community_email
-                    community_links {
-                      href
-                      label
-                    }
-                    content_body
                   }
                 }
               }
@@ -35,7 +39,7 @@ const Query = ({ render }) => (
           }
         `}
         render={({ allFile }) => {
-          const content = allFile.nodes.filter(node => node.relativePath === `content/footer/footer-${lang}.md`).shift()
+          const content = allFile.nodes.filter(node => node.relativePath === `content/contact/contact-${lang}.md`).shift()
           if (!content || !content.childMarkdownRemark) throw new Error(`No footer translations found for language ${lang}`)
           return render({
             ...content.childMarkdownRemark.frontmatter,

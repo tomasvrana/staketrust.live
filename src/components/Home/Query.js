@@ -15,9 +15,8 @@ const Query = ({ render }) => (
                 childMarkdownRemark{
                   frontmatter {
                     content {
-                      title
-                      features_cta
-                      getting_started_cta
+                      page_title
+                      page_subtitle
                     }
                   }
                 }

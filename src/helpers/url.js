@@ -25,6 +25,25 @@ const getHashParams = () => {
   return paramsObj
 }
 
+export const setHashParams = (params) => {
+  const paramStrings = Object.keys(params).map(k => params[k] && k ? `${k}=${params[k]}` : '').filter(v => !!v)
+  if (paramStrings.length > 0) {
+    if (window.history.pushState) {
+      window.history.pushState(null, null, `#${paramStrings.join('&')}`)
+      triggerEvent({ type: 'hashchange' })
+    } else {
+      window.location.hash = `#${paramStrings.join('&')}`
+    }
+  } else {
+    if (window.history.pushState) {
+      window.history.pushState(null, null, '#')
+      triggerEvent({ type: 'hashchange' })
+    } else {
+      window.location.hash = ''
+    }
+  }
+}
+
 export const setHashParam = (key, value) => {
   const params = getHashParams()
   if (!value) {
