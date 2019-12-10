@@ -1,5 +1,5 @@
 import IOHKSymbol from '../../../resources/images/dark/iohk-symbol-inverted.png'
-import StakeTrustLogo from '../../../resources/images/light/Atala-text-horizontal.svg'
+import StakeTrustLogo from '../../../resources/images/light/atala-text-horizontal.svg'
 import { createMuiTheme, colors } from '@material-ui/core'
 
 export default {
