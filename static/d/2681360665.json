@@ -1,1 +1,0 @@
-{"data":{"allFile":{"nodes":[{"relativePath":"content/header/header-en.md","childMarkdownRemark":{"frontmatter":{"select_language":"Select language"}}},{"relativePath":"content/header/header-ja.md","childMarkdownRemark":{"frontmatter":{"select_language":"言語を選択する"}}}]}}}
