@@ -1,7 +1,5 @@
-import CTA from './CTA'
-import Title from './Title'
+import Hero from './Hero'
 
 export {
-  CTA,
-  Title
+  Hero
 }

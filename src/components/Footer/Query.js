@@ -15,6 +15,7 @@ const Query = ({ render }) => (
                 childMarkdownRemark {
                   frontmatter {
                     title
+                    label_cardano
                     product_info
                     product_links{
                       href

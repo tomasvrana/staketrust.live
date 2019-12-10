@@ -1,39 +1,54 @@
 import IOHKSymbol from '../../../resources/images/dark/iohk-symbol-inverted.png'
+import StakeTrustLogo from '../../../resources/images/dark/Atala-text-horizontal-white.svg'
+import { createMuiTheme } from '@material-ui/core'
 
 export default {
-  colors: {
-    primary: '#131325',
-    primaryHighlight: '#4f4f7c',
-    secondary: 'rgba(83, 87, 135, 0.95)',
-    interactive: 'rgb(31, 193, 195)',
-    interactiveHighlight: 'rgb(63, 224, 226)',
-    text: '#ffffff',
-    secondaryText: '#afafaf',
-    textInverted: '#000000',
-    buttonColor: '#ffffff',
-    secondaryButtonBackground: '#444444',
-    secondaryButtonColor: '#ffffff',
-    secondaryButtonBackgroundHighlight: '#555555',
-    pageRule: '#36395d',
-    alertBackground: '#ffffff',
-    alertForeground: '#000000',
-    fail: '#eb2256',
-    success: '#2cbb69',
-    outline: '#4D90FE'
-  },
-  dimensions: {
-    contentWidth: '124rem',
-    contentGutterSize: '2rem',
-    mobileBreakpoint: 800,
-    screenSizes: {
-      small: 576,
-      medium: 768,
-      large: 992,
-      extraLarge: 1200
-    }
-  },
+  mui: createMuiTheme({
+    palette: {
+      primary: {
+        main: '#eb2256'
+      },
+      secondary: {
+        main: '#f69ab2'
+      },
+      background: {
+        default: '#121326',
+        alternative: '#1E1F31'
+      },
+      type: 'dark'
+    },
+    typography: {
+      fontFamily: [
+        'Montserrat',
+        'Arial',
+        'sans-serif'
+      ].join(','),
+      fontSize: 14,
+      htmlFontSize: 10,
+      h1: {
+        fontSize: '6.5rem'
+      },
+      h2: {
+        fontSize: '4rem'
+      },
+      h3: {
+        fontSize: '2.4rem'
+      },
+      h4: {
+        fontSize: '2rem'
+      },
+      h5: {
+        fontSize: '1.8rem'
+      },
+      h6: {
+        fontSize: '1.6rem'
+      }
+    },
+    spacing: factor => `${factor}rem`
+  }),
   images: {
+    logo: StakeTrustLogo,
     IOHKSymbol,
-    Logo: IOHKSymbol
+    StakeTrustLogo
   }
 }

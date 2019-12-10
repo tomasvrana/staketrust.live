@@ -21,13 +21,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatsby IOHK Starter',
-        short_name: 'IOHK Starter',
+        name: 'Stake Trust',
+        short_name: 'ADA Stake Pool Trust Live',
         start_url: '/',
         background_color: '#131325',
         theme_color: '#131325',
         display: 'minimal-ui',
-        icon: 'resources/images/icon.png', // This path is relative to the root of the site.
+        icon: 'resources/images/icon.svg', // This path is relative to the root of the site.
         icon_options: {
           purpose: 'maskable'
         }
@@ -35,9 +35,11 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-material-ui`,
       options: {
-        pathToConfigModule: `src/config/typography.js`
+        stylesProvider: {
+          injectFirst: true
+        }
       }
     }
   ]
