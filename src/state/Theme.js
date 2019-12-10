@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
+import { ThemeProvider as MaterialUIThemeProvider, StylesProvider } from '@material-ui/styles'
 import PropTypes from 'prop-types'
 import themes from '../config/themes'
 import { getLocalStorageValue, setLocalStorageValue } from '../helpers/localStorage'
@@ -23,11 +24,16 @@ const Provider = ({ children }) => {
     updateTheme(theme)
   }
 
+  console.log('theme', themes[theme])
   return (
     <ThemeContext.Provider value={{ themeString: theme, theme: themes[theme], setTheme }}>
-      <StyledThemeProvider theme={themes[theme]}>
-        {children}
-      </StyledThemeProvider>
+      <StylesProvider>
+        <MaterialUIThemeProvider theme={themes[theme].mui}>
+          <StyledThemeProvider theme={themes[theme].mui}>
+            {children}
+          </StyledThemeProvider>
+        </MaterialUIThemeProvider>
+      </StylesProvider>
     </ThemeContext.Provider>
   )
 }
