@@ -1,5 +1,5 @@
 import IOHKSymbol from '../../../resources/images/dark/iohk-symbol-inverted.png'
-import StakeTrustLogo from '../../../resources/images/light/atala-text-horizontal.svg'
+import StakeTrustLogo from '../../../resources/images/light/staketrust.png'
 import { createMuiTheme, colors } from '@material-ui/core'
 
 export default {
@@ -11,7 +11,7 @@ export default {
     },
     typography: {
       fontFamily: [
-        'Montserrat',
+        'Helvetica',
         'Arial',
         'sans-serif'
       ].join(','),
@@ -24,6 +24,7 @@ export default {
     spacing: factor => `${factor}rem`
   }),
   images: {
+    logo: StakeTrustLogo,
     IOHKSymbol,
     StakeTrustLogo
   }

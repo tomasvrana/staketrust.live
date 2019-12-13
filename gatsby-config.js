@@ -27,7 +27,7 @@ module.exports = {
         background_color: '#131325',
         theme_color: '#131325',
         display: 'minimal-ui',
-        icon: 'resources/images/icon.svg', // This path is relative to the root of the site.
+        icon: 'resources/images/icon-light.png', // This path is relative to the root of the site.
         icon_options: {
           purpose: 'maskable'
         }
