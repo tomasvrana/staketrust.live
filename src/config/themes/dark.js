@@ -1,5 +1,5 @@
 import IOHKSymbol from '../../../resources/images/dark/iohk-symbol-inverted.png'
-import StakeTrustLogo from '../../../resources/images/dark/atala-text-horizontal-white.svg'
+import StakeTrustLogo from '../../../resources/images/dark/staketrust-white.png'
 import { createMuiTheme } from '@material-ui/core'
 
 export default {
@@ -19,7 +19,7 @@ export default {
     },
     typography: {
       fontFamily: [
-        'Montserrat',
+        'Helvetica',
         'Arial',
         'sans-serif'
       ].join(','),

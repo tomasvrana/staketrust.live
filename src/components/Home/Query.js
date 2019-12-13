@@ -17,6 +17,8 @@ const Query = ({ render }) => (
                     content {
                       page_title
                       page_subtitle
+                      page_body
+                      page_specs
                     }
                   }
                 }
